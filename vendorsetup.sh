@@ -4,6 +4,11 @@
 export BUILD_USERNAME=nobody
 export BUILD_HOSTNAME=android-build
 
+# Build with ThinLTO
+echo "Building with ThinLTO."
+export GLOBAL_THINLTO=true
+export USE_THINLTO_CACHE=true
+
 # ABI compatibility checks fail for several reasons:
 #   - The update to Clang 12 causes some changes, but no breakage has been
 #     observed in practice.
